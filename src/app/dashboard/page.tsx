@@ -69,12 +69,9 @@ export default function DashboardPage() {
       }`}>
         <div className="p-6 border-b border-[#1E293B] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#00E5FF]/10 rounded-lg flex items-center justify-center border border-[#00E5FF]/30">
-              <Activity className="w-6 h-6 text-[#00E5FF]" />
+            <div className="relative w-32 h-10 md:w-40 md:h-12 flex items-center">
+              <img src="/kabi-logo.jpg" alt="Kabi Company" className="w-full h-full object-contain rounded-md" />
             </div>
-            <span className="text-2xl font-black tracking-tighter text-white">
-              Kabi<span className="text-[#94A3B8] font-light">.Terminal</span>
-            </span>
           </div>
           <button 
             className="md:hidden text-[#94A3B8] hover:text-white"

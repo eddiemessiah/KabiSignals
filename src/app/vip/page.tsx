@@ -31,12 +31,9 @@ export default function VipPage() {
       <nav className="fixed top-0 w-full z-50 border-b border-[#1E293B] bg-[#050B14]/80 backdrop-blur-lg">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#00E5FF]/10 rounded-lg flex items-center justify-center border border-[#00E5FF]/30">
-              <Activity className="w-6 h-6 text-[#00E5FF]" />
+            <div className="relative w-32 h-10 md:w-40 md:h-12 flex items-center">
+              <img src="/kabi-logo.jpg" alt="Kabi Company" className="w-full h-full object-contain rounded-md" />
             </div>
-            <span className="text-2xl font-black tracking-tighter text-white">
-              Kabi<span className="text-[#94A3B8] font-light">.Company</span>
-            </span>
           </Link>
           <Link href="/dashboard" className="px-6 py-2.5 rounded-md bg-[#1E293B] text-white font-bold text-sm hover:bg-[#2D3748] transition-colors">
             Back to Dashboard

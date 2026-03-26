@@ -89,12 +89,9 @@ export default function Home() {
       <nav className="fixed w-full z-50 border-b border-[#1E293B] bg-[#050B14]/80 backdrop-blur-lg">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#00E5FF]/10 rounded-lg flex items-center justify-center border border-[#00E5FF]/30">
-              <Activity className="w-6 h-6 text-[#00E5FF]" />
+            <div className="relative w-32 h-10 md:w-40 md:h-12 flex items-center">
+              <img src="/kabi-logo.jpg" alt="Kabi Company" className="w-full h-full object-contain rounded-md" />
             </div>
-            <span className="text-2xl font-black tracking-tighter text-white">
-              Kabi<span className="text-[#94A3B8] font-light">.Company</span>
-            </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#94A3B8]">
             <Link href="#signals" className="hover:text-[#00E5FF] transition-colors">Signals</Link>
