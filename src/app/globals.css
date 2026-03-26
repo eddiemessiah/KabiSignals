@@ -57,3 +57,13 @@ body {
   background-image: linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
 }
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: scroll-left 20s linear infinite;
+  display: flex;
+  width: max-content;
+}

@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, TrendingUp, ShieldCheck, Zap, Activity } from "lucide-react";
+import { ArrowRight, TrendingUp, ShieldCheck, Zap, Activity, Star, Users } from "lucide-react";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -96,13 +97,13 @@ export default function Home() {
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#94A3B8]">
-            <a href="#signals" className="hover:text-[#00E5FF] transition-colors">Signals</a>
-            <a href="#results" className="hover:text-[#00E5FF] transition-colors">Results</a>
-            <a href="#vip" className="hover:text-[#00E5FF] transition-colors">VIP Access</a>
+            <Link href="#signals" className="hover:text-[#00E5FF] transition-colors">Signals</Link>
+            <Link href="#results" className="hover:text-[#00E5FF] transition-colors">Results</Link>
+            <Link href="/vip" className="hover:text-[#00E5FF] transition-colors">VIP Access</Link>
           </div>
-          <button className="px-6 py-2.5 rounded-md bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors">
-            Member Login
-          </button>
+          <Link href="/dashboard" className="px-6 py-2.5 rounded-md bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors inline-block text-center">
+            Dashboard
+          </Link>
         </div>
       </nav>
 
@@ -114,33 +115,62 @@ export default function Home() {
             LIVE FOREX MARKET INSIGHTS
           </div>
 
-          <h1 ref={headlineRef} className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[1.05]">
+          <h1 ref={headlineRef} className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter mb-8 leading-[1.05]">
             <span className="kabi-gradient-text block">Institutional Grade.</span>
             <span className="text-white block mt-2">Retail Accessibility.</span>
           </h1>
 
-          <p ref={subtitleRef} className="text-xl md:text-2xl text-[#94A3B8] font-light max-w-3xl mx-auto leading-relaxed mb-12">
+          <p ref={subtitleRef} className="text-lg md:text-xl lg:text-2xl text-[#94A3B8] font-light max-w-3xl mx-auto leading-relaxed mb-12">
             We analyze the charts. You execute the trades. Join a community built on transparency, high-probability setups, and consistent market delivery.
           </p>
 
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="btn-primary w-full sm:w-auto flex items-center justify-center gap-3">
+            <Link href="/dashboard" className="btn-primary w-full sm:w-auto flex items-center justify-center gap-3">
               Get Free Signals <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-3">
+            </Link>
+            <Link href="/vip" className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-3">
               Explore VIP Status
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Scrolling Marquee */}
+      <div className="w-full overflow-hidden bg-[#0A1220]/80 border-y border-[#1E293B] py-4 relative z-10 flex">
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-12 font-mono text-sm tracking-widest text-[#00E5FF]">
+          <span>EUR/USD +45 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>GBP/USD +30 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>XAU/USD +120 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>USD/JPY -15 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>EUR/USD +45 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>GBP/USD +30 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>XAU/USD +120 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>USD/JPY -15 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>EUR/USD +45 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>GBP/USD +30 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>XAU/USD +120 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>USD/JPY -15 PIPS</span>
+        </div>
+      </div>
+
       {/* Live Stats Ticker (GSAP Animated) */}
-      <section ref={statsRef} className="border-y border-[#1E293B] bg-[#0A1220]/50 backdrop-blur-md relative z-10">
-        <div className="container mx-auto px-6 py-12">
+      <section ref={statsRef} className="bg-[#050B14] relative z-10">
+        <div className="container mx-auto px-6 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-[#1E293B]">
             {[
               { label: "Win Rate", value: "84", suffix: "%", color: "text-[#00FF88]", glow: "kabi-glow-green" },
-              { label: "Pips Captured (2025)", value: "12500", prefix: "+", color: "text-[#00E5FF]", glow: "kabi-glow-cyan" },
+              { label: "Pips Captured", value: "12500", prefix: "+", color: "text-[#00E5FF]", glow: "kabi-glow-cyan" },
               { label: "Active Members", value: "5420", prefix: "", color: "text-white", glow: "" },
               { label: "Daily Setups", value: "5", suffix: "+", color: "text-white", glow: "" }
             ].map((stat, i) => (
@@ -155,27 +185,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Freemium Pipeline */}
-      <section id="signals" className="py-32 container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-6">Built For Traders. Not Gamblers.</h2>
-          <p className="text-[#94A3B8] max-w-2xl mx-auto text-lg">Stop relying on messy chart noise. We deliver clean, actionable levels directly to your dashboard.</p>
+      {/* The Freemium Pipeline - Asymmetrical Bento Box */}
+      <section id="signals" className="py-24 container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6">Built For Traders. Not Gamblers.</h2>
+          <p className="text-[#94A3B8] max-w-2xl mx-auto text-lg md:text-xl">Stop relying on messy chart noise. We deliver clean, actionable levels directly to your dashboard.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            { icon: Zap, title: "Precision Entries", desc: "Exact price points backed by institutional supply/demand zones." },
-            { icon: ShieldCheck, title: "Strict Risk Logic", desc: "Every signal includes hard Stop-Loss and Take-Profit ratios." },
-            { icon: TrendingUp, title: "Daily Execution", desc: "Coverage across Major Pairs and Gold (XAU/USD) during prime volatility." }
-          ].map((feature, i) => (
-            <div key={i} className="glass-panel p-8 rounded-2xl group hover:border-[#00E5FF]/50 transition-colors duration-500">
-              <div className="w-14 h-14 bg-[#0A1220] border border-[#1E293B] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                <feature.icon className="w-7 h-7 text-[#00E5FF]" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-              <p className="text-[#94A3B8] leading-relaxed">{feature.desc}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* Large Main Box */}
+          <div className="glass-panel p-8 md:p-12 rounded-3xl md:col-span-2 lg:col-span-2 group hover:border-[#00E5FF]/50 transition-colors duration-500 relative overflow-hidden flex flex-col justify-end min-h-[400px]">
+            <div className="absolute top-8 right-8 w-16 h-16 bg-[#00E5FF]/10 rounded-2xl flex items-center justify-center border border-[#00E5FF]/30 backdrop-blur-md">
+              <Zap className="w-8 h-8 text-[#00E5FF]" />
             </div>
-          ))}
+            <div className="relative z-10">
+              <div className="inline-block px-3 py-1 rounded-full border border-[#00E5FF]/30 bg-[#00E5FF]/10 text-[#00E5FF] text-xs font-mono font-bold tracking-widest mb-4">
+                THE FOUNDATION
+              </div>
+              <h3 className="text-3xl md:text-4xl font-black mb-4 text-white">Freemium Model</h3>
+              <p className="text-[#94A3B8] text-lg leading-relaxed max-w-lg">
+                We believe in proving our value first. Start with our free tier to experience institutional-grade analysis without the commitment.
+              </p>
+            </div>
+            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#00E5FF]/5 rounded-full blur-[80px]" />
+          </div>
+
+          {/* Vertical Box */}
+          <div className="glass-panel p-8 rounded-3xl md:col-span-1 lg:col-span-1 group hover:border-[#00FF88]/50 transition-colors duration-500 flex flex-col min-h-[400px]">
+            <div className="w-14 h-14 bg-[#0A1220] border border-[#1E293B] rounded-xl flex items-center justify-center mb-auto group-hover:scale-110 transition-transform duration-500">
+              <Users className="w-7 h-7 text-[#00FF88]" />
+            </div>
+            <div className="mt-8">
+              <div className="inline-block px-3 py-1 rounded-full border border-[#00FF88]/30 bg-[#00FF88]/10 text-[#00FF88] text-xs font-mono font-bold tracking-widest mb-4">
+                STEP ONE
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white">Free Access</h3>
+              <p className="text-[#94A3B8] leading-relaxed">
+                (Lead Generation). Get access to daily market updates, educational content, and a limited number of high-probability setups to test our edge.
+              </p>
+            </div>
+          </div>
+
+          {/* Horizontal Box */}
+          <div className="glass-panel p-8 rounded-3xl md:col-span-2 lg:col-span-3 group hover:border-[#FF3366]/50 transition-colors duration-500 flex flex-col md:flex-row items-center gap-8">
+            <div className="w-16 h-16 shrink-0 bg-[#0A1220] border border-[#1E293B] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+              <Star className="w-8 h-8 text-[#FF3366]" />
+            </div>
+            <div>
+              <div className="inline-block px-3 py-1 rounded-full border border-[#FF3366]/30 bg-[#FF3366]/10 text-[#FF3366] text-xs font-mono font-bold tracking-widest mb-4">
+                THE ACCELERATOR
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">VIP Membership</h3>
+              <p className="text-[#94A3B8] text-lg leading-relaxed">
+                (Revenue Layer). Unlock our complete trading arsenal. Full access to all daily signals, deep market breakdowns, premium community access, and 1-on-1 mentorship opportunities.
+              </p>
+            </div>
+            <div className="ml-auto mt-6 md:mt-0 shrink-0">
+              <Link href="/vip" className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-colors">
+                Explore VIP
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
