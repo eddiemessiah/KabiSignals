@@ -7,7 +7,7 @@ import { useState } from "react";
 const faqData = [
   {
     id: 1,
-    question: "What are Forex Signals?",
+    question: "What are Forex Forex Signals Crypto Signals?",
     answer: "Forex signals are actionable trading recommendations provided by expert analysts or algorithms. They tell you exactly which currency pair to trade, whether to buy or sell, and specify the exact entry price, take profit, and stop loss levels."
   },
   {

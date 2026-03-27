@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kabi.Company - Institutional Forex Signals",
+  title: "Kabi.Company - Institutional Forex Forex Signals Crypto Signals",
   description: "Access high-probability forex trade setups. Join the elite community and elevate your trading.",
 };
 

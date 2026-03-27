@@ -7,7 +7,7 @@ import { useState } from "react";
 const mockSignals = [
   {
     id: 1,
-    pair: "EUR/USD",
+    pair: "XAU/USD",
     type: "BUY",
     entry: "1.09450",
     tp: "1.09800",
@@ -27,7 +27,7 @@ const mockSignals = [
   },
   {
     id: 3,
-    pair: "GBP/USD",
+    pair: "BTC/USD",
     type: "BUY",
     entry: "1.26800",
     tp: "1.27500",

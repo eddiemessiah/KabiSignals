@@ -135,25 +135,25 @@ export default function Home() {
       {/* Scrolling Marquee */}
       <div className="w-full overflow-hidden bg-[#0A1220]/80 border-y border-[#1E293B] py-4 relative z-10 flex">
         <div className="animate-marquee whitespace-nowrap flex items-center gap-12 font-mono text-sm tracking-widest text-[#00E5FF]">
-          <span>EUR/USD +45 PIPS</span>
+          <span>XAU/USD +45 PIPS</span>
           <span className="text-[#94A3B8]">•</span>
-          <span>GBP/USD +30 PIPS</span>
-          <span className="text-[#94A3B8]">•</span>
-          <span>XAU/USD +120 PIPS</span>
-          <span className="text-[#94A3B8]">•</span>
-          <span>USD/JPY -15 PIPS</span>
-          <span className="text-[#94A3B8]">•</span>
-          <span>EUR/USD +45 PIPS</span>
-          <span className="text-[#94A3B8]">•</span>
-          <span>GBP/USD +30 PIPS</span>
+          <span>BTC/USD +30 PIPS</span>
           <span className="text-[#94A3B8]">•</span>
           <span>XAU/USD +120 PIPS</span>
           <span className="text-[#94A3B8]">•</span>
           <span>USD/JPY -15 PIPS</span>
           <span className="text-[#94A3B8]">•</span>
-          <span>EUR/USD +45 PIPS</span>
+          <span>XAU/USD +45 PIPS</span>
           <span className="text-[#94A3B8]">•</span>
-          <span>GBP/USD +30 PIPS</span>
+          <span>BTC/USD +30 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>XAU/USD +120 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>USD/JPY -15 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>XAU/USD +45 PIPS</span>
+          <span className="text-[#94A3B8]">•</span>
+          <span>BTC/USD +30 PIPS</span>
           <span className="text-[#94A3B8]">•</span>
           <span>XAU/USD +120 PIPS</span>
           <span className="text-[#94A3B8]">•</span>

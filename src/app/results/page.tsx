@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const historicalTrades = [
-  { id: 1, pair: "EUR/USD", date: "2023-10-25", type: "BUY", pips: "+45", status: "WON" },
+  { id: 1, pair: "XAU/USD", date: "2023-10-25", type: "BUY", pips: "+45", status: "WON" },
   { id: 2, pair: "GBP/JPY", date: "2023-10-24", type: "SELL", pips: "+120", status: "WON" },
   { id: 3, pair: "XAU/USD", date: "2023-10-23", type: "BUY", pips: "-30", status: "LOST" },
   { id: 4, pair: "USD/CHF", date: "2023-10-22", type: "SELL", pips: "+25", status: "WON" },
