@@ -98,8 +98,8 @@ export default function Home() {
             <Link href="#results" className="hover:text-[#00E5FF] transition-colors">Results</Link>
             <Link href="/vip" className="hover:text-[#00E5FF] transition-colors">VIP Access</Link>
           </div>
-          <Link href="/dashboard" className="px-6 py-2.5 rounded-md bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors inline-block text-center">
-            Dashboard
+          <Link href="/login" className="px-6 py-2.5 rounded-md bg-white text-black font-bold text-sm hover:bg-gray-200 transition-colors inline-block text-center">
+            Member Login
           </Link>
         </div>
       </nav>
